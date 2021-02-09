@@ -6,8 +6,10 @@ public class Programa {
 
 	public static void main(String[] args) {
 		
-		Tabuleiro t1= new Tabuleiro(3, 3);
-		t1.imprimeTabuleiro();
+		Jogo jogo=new Jogo();
+		int[] teste=jogo.converteDigito('a', 1);
+		jogo.tabuleiro.imprimeTabuleiro();
+		System.out.println(teste[0]);
 		
 	}
 
