@@ -26,8 +26,13 @@ public class Tabuleiro {
 	public void imprimeTabuleiro() {
 		for(int i=0;i<3;i++) {
 			for(int j=0;j<3;j++) {
-				imprimeValor(matriz[i][j]);
+				System.out.print(imprimeValor(matriz[i][j]));
+				if(j==0 ||j==1) {
+					System.out.print("|");
+				}
 			}
+			
+			System.out.println();
 		}
 	}
 	public String imprimeValor(int valor) {
