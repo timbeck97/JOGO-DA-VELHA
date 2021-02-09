@@ -14,6 +14,7 @@ public class Tabuleiro {
 				matriz[i][j]=0;
 			}
 		}
+		imprimeTabuleiro();
 	}
 	
 	public int[][] getMatriz() {
