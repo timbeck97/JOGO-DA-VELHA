@@ -40,7 +40,7 @@ public class Tabuleiro {
 			}
 			System.out.println();
 		}
-		System.out.println("   a   b   c");
+		System.out.println("   a   b   c\n");
 	}
 	public String imprimeValor(int valor) {
 		if(valor==0) {
