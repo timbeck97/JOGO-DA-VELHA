@@ -13,6 +13,9 @@ public class Jogo {
 		
 		int linha1=Integer.parseInt(posicao.substring(1));
 		char coluna1=posicao.charAt(0);
+		if(linha1<1||linha1>3 ||coluna1<'a' ||coluna1>'c') {
+			throw new ExcecaodoJogo("Digite uma coordenada correta");
+		}
 		int[] aux=new int[2];
 		aux[0]=(int)coluna1-'a';
 		aux[1]=3-linha1;
@@ -21,6 +24,9 @@ public class Jogo {
 	
 	public void jogada(String posicao, int jogador) {
 		int[] x=converteDigito(posicao);
+		if(tabuleiro.getMatriz()[x[1]][x[0]]!=0) {
+			throw new ExcecaodoJogo("Essa posicao ja esta ocupada!!");
+		}
 		if(jogador==1) {
 			tabuleiro.getMatriz()[x[1]][x[0]]=-1;
 		}
