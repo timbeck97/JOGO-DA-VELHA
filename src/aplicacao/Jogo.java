@@ -58,11 +58,11 @@ public class Jogo {
 				aux[i][j]=tabuleiro.getMatriz()[i][j];
 			}
 		}
-		if(aux[0][1]+aux[0][1]+aux[0][2]==-3 ||aux[1][1]+aux[1][1]+aux[1][2]==-3 || aux[2][0]+aux[2][1]+aux[2][2]==-3 ) {
+		if(aux[0][0]+aux[0][1]+aux[0][2]==-3 ||aux[1][0]+aux[1][1]+aux[1][2]==-3 || aux[2][0]+aux[2][1]+aux[2][2]==-3 ) {
 			//System.out.println("\n\nO JOGADOR NUMERO 1 GANHOU");
 			return 1;
 		}
-		else if(aux[0][1]+aux[0][1]+aux[0][2]==3 ||aux[1][1]+aux[1][1]+aux[1][2]==3 || aux[2][0]+aux[2][1]+aux[2][2]==3 ) {
+		else if(aux[0][0]+aux[0][1]+aux[0][2]==3 ||aux[1][0]+aux[1][1]+aux[1][2]==3 || aux[2][0]+aux[2][1]+aux[2][2]==3 ) {
 			//System.out.println("\n\nO JOGADOR NUMERO 2 GANHOU");
 			return 2;
 		}
@@ -112,5 +112,20 @@ public class Jogo {
 		else {
 			return 0;
 		}
+	}
+	public boolean tabuleiroCheio() {
+		
+		for(int i=0;i<3;i++) {
+			for(int j=0;j<3;j++) {
+				if(tabuleiro.getMatriz()[i][j]==0) {
+					return false;
+
+				}
+			}
+		}
+		System.out.println("EMPATE: TABULEIRO COMPLETO");
+		return true;
+		
+		
 	}
 }	
